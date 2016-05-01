@@ -81,6 +81,7 @@ int ScreamingJazzApp::main(const std::vector<std::string>& args)
     pParams->setMaxQueued(100);
     pParams->setMaxThreads(16);
     ServerSocket svs(port); // set-up a server socket
+    
     auto handler = new SelectorRequestHandlerFactory();
     handler->addSelectorAndFactory(new AllSelector(), new SimpleRequestHandlerFactory<PenisHandler>());
     HTTPServer srv(handler, svs, pParams);

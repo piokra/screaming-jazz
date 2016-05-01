@@ -38,7 +38,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/AllSelector.o \
 	${OBJECTDIR}/PenisHandler.o \
 	${OBJECTDIR}/ScreamingJazzApp.o \
+	${OBJECTDIR}/SelectorProduct.o \
 	${OBJECTDIR}/SelectorRequestHandlerFactory.o \
+	${OBJECTDIR}/SelectorSum.o \
 	${OBJECTDIR}/main.o
 
 
@@ -81,10 +83,20 @@ ${OBJECTDIR}/ScreamingJazzApp.o: ScreamingJazzApp.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ScreamingJazzApp.o ScreamingJazzApp.cpp
 
+${OBJECTDIR}/SelectorProduct.o: SelectorProduct.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SelectorProduct.o SelectorProduct.cpp
+
 ${OBJECTDIR}/SelectorRequestHandlerFactory.o: SelectorRequestHandlerFactory.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SelectorRequestHandlerFactory.o SelectorRequestHandlerFactory.cpp
+
+${OBJECTDIR}/SelectorSum.o: SelectorSum.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SelectorSum.o SelectorSum.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

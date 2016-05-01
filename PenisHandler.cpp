@@ -14,6 +14,8 @@
 #include "PenisHandler.h"
 #include <Poco/Net/HTTPServerRequest.h>
 #include <Poco/Net/HTTPServerResponse.h>
+#include <iostream>
+using namespace std;
 namespace ScreamingJazz
 {
 
@@ -31,12 +33,22 @@ PenisHandler::~PenisHandler()
 
 void PenisHandler::handleRequest(HTTPServerRequest& request, HTTPServerResponse& response)
 {
+    cout << request.getURI() << endl;
     response.setContentType("text/html");
     response.setChunkedTransferEncoding(true);
     auto& out = response.send();
     out << R"swag(<html><head><meta charset="UTF-8"><title>HTTP Server powered by POCO C++ Libraries</title></head >)swag";
     auto penis =
-            R"swag(…………………...„„-~^^~„-„„_<br>
+            R"swag(
+     <pre>
+           ,-'-.     _.,  <br>
+        . (    '("'-'  ').  <br>
+     ( ' ((  |.      )\/( ) <br>
+      '(  )) | () |" |  | ') <br>
+         ( . ,-. ,-.. __.) <br>
+           /)  /  ' /         <br>
+          /   /) / /                <br>
+    …………………...„„-~^^~„-„„_<br>
 ………………„-^*'' : : „'' : : : : *-„<br>
 …………..„-* : : :„„--/ : : : : : : : '\<br>
 …………./ : : „-* . .| : : : : : : : : '|<br>
@@ -46,18 +58,16 @@ void PenisHandler::handleRequest(HTTPServerRequest& request, HTTPServerResponse&
 ……..../ . . . . . . . .'\ : : : : : : : |<br>
 ……../ . . . . . . . . . .\ : : : : : : :|<br>
 ……./ . . . . . . . . . . . '\ : : : : : /<br>
-….../ . . . . . . . . . . . . . *-„„„„-*'<br>
-….'/ . . . . . . . . . . . . . . '|<br>
 …/ . . . . . . . ./ . . . . . . .| <br>
 ../ . . . . . . . .'/ . . . . . . .'|<br>
-./ . . . . . . . . / . . . . . . .'|<br>
+./ . . . . . . . . . . . . . . .'|<br>
 '/ . . . . . . . . . . . . . . . .'|<br>
 '| . . . . . \ . . . . . . . . . .|<br>
 '| . . . . . . \„_^- „ . . . . .'|<br>
 '| . . . . . . . . .'\ .\ ./ '/ . |<br>
 | .\ . . . . . . . . . \ .'' / . '|<br>
 | . . . . . . . . . . / .'/ . . .|<br>
-| . . . . . . .| . . / ./ ./ . .|)swag";
+| . . . . . . .| . . / ./ ./ . .|</pre>)swag";
     out << "<body>";
     out << penis;
     out << "</body>";

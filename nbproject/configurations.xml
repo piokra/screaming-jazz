@@ -7,8 +7,11 @@
       <itemPath>AllSelector.h</itemPath>
       <itemPath>PenisHandler.h</itemPath>
       <itemPath>RequestSelector.h</itemPath>
+      <itemPath>RequestSelectors.h</itemPath>
       <itemPath>ScreamingJazzApp.h</itemPath>
+      <itemPath>SelectorProduct.h</itemPath>
       <itemPath>SelectorRequestHandlerFactory.h</itemPath>
+      <itemPath>SelectorSum.h</itemPath>
       <itemPath>SimpleFactories.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -21,7 +24,9 @@
       <itemPath>AllSelector.cpp</itemPath>
       <itemPath>PenisHandler.cpp</itemPath>
       <itemPath>ScreamingJazzApp.cpp</itemPath>
+      <itemPath>SelectorProduct.cpp</itemPath>
       <itemPath>SelectorRequestHandlerFactory.cpp</itemPath>
+      <itemPath>SelectorSum.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -62,13 +67,23 @@
       </item>
       <item path="RequestSelector.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="RequestSelectors.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ScreamingJazzApp.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ScreamingJazzApp.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="SelectorProduct.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SelectorProduct.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="SelectorRequestHandlerFactory.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="SelectorRequestHandlerFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SelectorSum.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SelectorSum.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="SimpleFactories.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -112,13 +127,23 @@
       </item>
       <item path="RequestSelector.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="RequestSelectors.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ScreamingJazzApp.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ScreamingJazzApp.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="SelectorProduct.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SelectorProduct.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="SelectorRequestHandlerFactory.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="SelectorRequestHandlerFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SelectorSum.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SelectorSum.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="SimpleFactories.h" ex="false" tool="3" flavor2="0">
       </item>
