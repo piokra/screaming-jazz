@@ -23,6 +23,7 @@ class AllSelector : public RequestSelector
 {
 public:
     AllSelector();
+    AllSelector(int priority);
     AllSelector(const AllSelector& orig);
     virtual ~AllSelector();
     
@@ -30,7 +31,7 @@ public:
 
     
 private:
-
+    int mPriority = 0;
 };
 
 }

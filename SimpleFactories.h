@@ -16,19 +16,42 @@
 
 #include <Poco/Net/HTTPRequestHandlerFactory.h>
 #include <Poco/Net/HTTPRequestHandler.h>
+#include "TemplateUtil.h"
+#include <tuple>
 
 using namespace Poco;
 using namespace Poco::Net;
+using namespace std;
 
-template <typename T>
-class SimpleRequestHandlerFactory : public HTTPRequestHandlerFactory
-{
+template <typename T, typename...R>
+class SimpleRequestHandlerFactory : public HTTPRequestHandlerFactory {
+    tuple<R...> mParams;
+    typename gens<sizeof...(R)>::type mSequence;
 
-    HTTPRequestHandler* createRequestHandler(const HTTPServerRequest& request) override
-    {
-        return new T();
+    template<int...i>
+    HTTPRequestHandler* creator(seq<i...>) {
+        return new T(get<i>(mParams)...);
+    }
+public:
+
+    SimpleRequestHandlerFactory(R...r) {
+        mParams = make_tuple(r...);
+    }
+
+    HTTPRequestHandler* createRequestHandler(const HTTPServerRequest& request) override {
+        return creator(mSequence);
     };
 
+
+
+};
+
+template <typename T>
+class SimpleRequestHandlerFactory<T> : public HTTPRequestHandlerFactory
+{
+    HTTPRequestHandler* createRequestHandler(const HTTPServerRequest& request) override {
+        return new T();
+    };
 };
 
 #endif /* SIMPLEFACTORIES_H */

@@ -23,7 +23,7 @@ using namespace ScreamingJazz;
 int main(int argc, char** argv)
 {
     ScreamingJazzApp sja;
-    SimpleRequestHandlerFactory<PenisHandler> p;
+    SimpleRequestHandlerFactory<PenisHandler, int> p(3);
     
     return sja.run(argc,argv);
 }

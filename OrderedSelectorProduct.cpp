@@ -11,39 +11,33 @@
  * Created on 02 May 2016, 00:58
  */
 
-#include "SelectorProduct.h"
+#include "OrderedSelectorProduct.h"
 namespace ScreamingJazz
 {
 
-SelectorProduct::SelectorProduct()
+OrderedSelectorProduct::OrderedSelectorProduct()
 {
 }
 
-SelectorProduct::SelectorProduct(const SelectorProduct& orig)
+OrderedSelectorProduct::OrderedSelectorProduct(const OrderedSelectorProduct& orig)
 {
 }
 
-SelectorProduct::~SelectorProduct()
+OrderedSelectorProduct::~OrderedSelectorProduct()
 {
 }
 
-RequestSelector::Selection SelectorProduct::choose(const HTTPServerRequest& request) const
+RequestSelector::Selection OrderedSelectorProduct::choose(const HTTPServerRequest& request) const
 {
-    Selec ret{true, false, 100000};
-    for (auto it = getSelectors().begin(); it != getSelectors().end(); ++it)
+    Selec ret{true,false,100000};
+    for(auto it = mSelectors.begin(); it!=mSelectors.end(); ++it)
     {
         
         auto t = (*it)->choose(request);
         ret.wants &= t.wants;
         ret.force |= t.force;
-        ret.priority = min(ret.priority, t.priority);
-
-        if (ret.wants == false) break;
+        ret.priority = min(ret.priority,t.priority);
     }
-
-    return ret;
 }
-
-
 
 }
