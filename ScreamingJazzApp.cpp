@@ -21,11 +21,14 @@
 #include <Poco/Net/ServerSocket.h>
 #include <iostream>
 #include <thread>
+#include <string>
 #include <chrono>
 #include "SimpleFactories.h"
 #include "PenisHandler.h"
 #include "SelectorRequestHandlerFactory.h"
 #include "AllSelector.h"
+#include "LocalSelector.h"
+#include "TextOutputHandler.h"
 using SJ = ScreamingJazzApp;
 using SJCallback = OptionCallback<ScreamingJazzApp>;
 
@@ -84,6 +87,7 @@ int ScreamingJazzApp::main(const std::vector<std::string>& args)
     
     auto handler = new SelectorRequestHandlerFactory();
     handler->addSelectorAndFactory(new AllSelector(), new SimpleRequestHandlerFactory<PenisHandler>());
+    handler->addSelectorAndFactory(new LocalSelector(), new SimpleRequestHandlerFactory<TextOutputHandler, string>("Hello boys"));
     HTTPServer srv(handler, svs, pParams);
     // start the HTTPServer
     srv.start();

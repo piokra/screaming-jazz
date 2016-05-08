@@ -13,27 +13,33 @@
 
 #include "AllSelector.h"
 
-namespace ScreamingJazz {
+namespace ScreamingJazz
+{
 
-    AllSelector::AllSelector() : AllSelector(0) {
+AllSelector::AllSelector() : AllSelector(0)
+{
 
-    }
+}
 
-    AllSelector::AllSelector(int priority) : mPriority(priority) {
-    }
+AllSelector::AllSelector(int priority) : mPriority(priority)
+{
+}
 
-    AllSelector::AllSelector(const AllSelector& orig) {
-    }
+AllSelector::AllSelector(const AllSelector& orig)
+{
+}
 
-    AllSelector::~AllSelector() {
-    }
+AllSelector::~AllSelector()
+{
+}
 
-    RequestSelector::Selection AllSelector::choose(const HTTPServerRequest& request) const {
-        return
-        {
-            true, false, mPriority
-        };
-    }
+RequestSelector::Selection AllSelector::choose(const HTTPServerRequest& request) const
+{
+    return
+    {
+        true, false, mPriority
+    };
+}
 
 
 }

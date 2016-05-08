@@ -5,6 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>AllSelector.h</itemPath>
+      <itemPath>LocalSelector.h</itemPath>
       <itemPath>PenisHandler.h</itemPath>
       <itemPath>RequestSelector.h</itemPath>
       <itemPath>RequestSelectors.h</itemPath>
@@ -13,6 +14,8 @@
       <itemPath>SelectorRequestHandlerFactory.h</itemPath>
       <itemPath>SelectorSum.h</itemPath>
       <itemPath>SimpleFactories.h</itemPath>
+      <itemPath>TemplateUtil.h</itemPath>
+      <itemPath>TextOutputHandler.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -22,11 +25,13 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>AllSelector.cpp</itemPath>
+      <itemPath>LocalSelector.cpp</itemPath>
       <itemPath>PenisHandler.cpp</itemPath>
       <itemPath>ScreamingJazzApp.cpp</itemPath>
       <itemPath>SelectorProduct.cpp</itemPath>
       <itemPath>SelectorRequestHandlerFactory.cpp</itemPath>
       <itemPath>SelectorSum.cpp</itemPath>
+      <itemPath>TextOutputHandler.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -61,6 +66,10 @@
       </item>
       <item path="AllSelector.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="LocalSelector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LocalSelector.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="PenisHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="PenisHandler.h" ex="false" tool="3" flavor2="0">
@@ -86,6 +95,12 @@
       <item path="SelectorSum.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="SimpleFactories.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TemplateUtil.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TextOutputHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TextOutputHandler.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -121,6 +136,10 @@
       </item>
       <item path="AllSelector.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="LocalSelector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LocalSelector.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="PenisHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="PenisHandler.h" ex="false" tool="3" flavor2="0">
@@ -146,6 +165,12 @@
       <item path="SelectorSum.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="SimpleFactories.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TemplateUtil.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TextOutputHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TextOutputHandler.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

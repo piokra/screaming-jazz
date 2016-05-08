@@ -36,11 +36,13 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/AllSelector.o \
+	${OBJECTDIR}/LocalSelector.o \
 	${OBJECTDIR}/PenisHandler.o \
 	${OBJECTDIR}/ScreamingJazzApp.o \
 	${OBJECTDIR}/SelectorProduct.o \
 	${OBJECTDIR}/SelectorRequestHandlerFactory.o \
 	${OBJECTDIR}/SelectorSum.o \
+	${OBJECTDIR}/TextOutputHandler.o \
 	${OBJECTDIR}/main.o
 
 
@@ -73,6 +75,11 @@ ${OBJECTDIR}/AllSelector.o: AllSelector.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AllSelector.o AllSelector.cpp
 
+${OBJECTDIR}/LocalSelector.o: LocalSelector.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LocalSelector.o LocalSelector.cpp
+
 ${OBJECTDIR}/PenisHandler.o: PenisHandler.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -97,6 +104,11 @@ ${OBJECTDIR}/SelectorSum.o: SelectorSum.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SelectorSum.o SelectorSum.cpp
+
+${OBJECTDIR}/TextOutputHandler.o: TextOutputHandler.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TextOutputHandler.o TextOutputHandler.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
