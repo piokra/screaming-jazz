@@ -36,6 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/AllSelector.o \
+	${OBJECTDIR}/AllTextSelector.o \
+	${OBJECTDIR}/ExactTextSelector.o \
 	${OBJECTDIR}/LocalSelector.o \
 	${OBJECTDIR}/PenisHandler.o \
 	${OBJECTDIR}/ScreamingJazzApp.o \
@@ -43,6 +45,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/SelectorRequestHandlerFactory.o \
 	${OBJECTDIR}/SelectorSum.o \
 	${OBJECTDIR}/TextOutputHandler.o \
+	${OBJECTDIR}/URISelector.o \
 	${OBJECTDIR}/main.o
 
 
@@ -74,6 +77,16 @@ ${OBJECTDIR}/AllSelector.o: AllSelector.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AllSelector.o AllSelector.cpp
+
+${OBJECTDIR}/AllTextSelector.o: AllTextSelector.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AllTextSelector.o AllTextSelector.cpp
+
+${OBJECTDIR}/ExactTextSelector.o: ExactTextSelector.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ExactTextSelector.o ExactTextSelector.cpp
 
 ${OBJECTDIR}/LocalSelector.o: LocalSelector.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -109,6 +122,11 @@ ${OBJECTDIR}/TextOutputHandler.o: TextOutputHandler.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TextOutputHandler.o TextOutputHandler.cpp
+
+${OBJECTDIR}/URISelector.o: URISelector.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/URISelector.o URISelector.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

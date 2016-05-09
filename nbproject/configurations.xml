@@ -4,15 +4,25 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="Selectors" projectFiles="true">
+        <logicalFolder name="f1" displayName="TextSelectors" projectFiles="true">
+          <itemPath>AllTextSelector.cpp</itemPath>
+          <itemPath>AllTextSelector.h</itemPath>
+          <itemPath>ExactTextSelector.cpp</itemPath>
+          <itemPath>ExactTextSelector.h</itemPath>
+          <itemPath>TextSelector.h</itemPath>
+        </logicalFolder>
+        <itemPath>LocalSelector.h</itemPath>
+        <itemPath>RequestSelector.h</itemPath>
+        <itemPath>RequestSelectors.h</itemPath>
+        <itemPath>SelectorProduct.h</itemPath>
+        <itemPath>SelectorSum.h</itemPath>
+        <itemPath>URISelector.h</itemPath>
+      </logicalFolder>
       <itemPath>AllSelector.h</itemPath>
-      <itemPath>LocalSelector.h</itemPath>
       <itemPath>PenisHandler.h</itemPath>
-      <itemPath>RequestSelector.h</itemPath>
-      <itemPath>RequestSelectors.h</itemPath>
       <itemPath>ScreamingJazzApp.h</itemPath>
-      <itemPath>SelectorProduct.h</itemPath>
       <itemPath>SelectorRequestHandlerFactory.h</itemPath>
-      <itemPath>SelectorSum.h</itemPath>
       <itemPath>SimpleFactories.h</itemPath>
       <itemPath>TemplateUtil.h</itemPath>
       <itemPath>TextOutputHandler.h</itemPath>
@@ -24,13 +34,16 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>AllSelector.cpp</itemPath>
-      <itemPath>LocalSelector.cpp</itemPath>
+      <logicalFolder name="f1" displayName="Selectors" projectFiles="true">
+        <itemPath>AllSelector.cpp</itemPath>
+        <itemPath>LocalSelector.cpp</itemPath>
+        <itemPath>SelectorProduct.cpp</itemPath>
+        <itemPath>SelectorSum.cpp</itemPath>
+        <itemPath>URISelector.cpp</itemPath>
+      </logicalFolder>
       <itemPath>PenisHandler.cpp</itemPath>
       <itemPath>ScreamingJazzApp.cpp</itemPath>
-      <itemPath>SelectorProduct.cpp</itemPath>
       <itemPath>SelectorRequestHandlerFactory.cpp</itemPath>
-      <itemPath>SelectorSum.cpp</itemPath>
       <itemPath>TextOutputHandler.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -66,6 +79,14 @@
       </item>
       <item path="AllSelector.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="AllTextSelector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AllTextSelector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ExactTextSelector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ExactTextSelector.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="LocalSelector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LocalSelector.h" ex="false" tool="3" flavor2="0">
@@ -101,6 +122,12 @@
       <item path="TextOutputHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="TextOutputHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TextSelector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="URISelector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="URISelector.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -136,6 +163,14 @@
       </item>
       <item path="AllSelector.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="AllTextSelector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AllTextSelector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ExactTextSelector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ExactTextSelector.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="LocalSelector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LocalSelector.h" ex="false" tool="3" flavor2="0">
@@ -171,6 +206,12 @@
       <item path="TextOutputHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="TextOutputHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TextSelector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="URISelector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="URISelector.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
