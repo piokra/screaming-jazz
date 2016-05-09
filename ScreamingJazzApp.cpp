@@ -29,6 +29,7 @@
 #include "AllSelector.h"
 #include "LocalSelector.h"
 #include "TextOutputHandler.h"
+#include "URISelector.h"
 using SJ = ScreamingJazzApp;
 using SJCallback = OptionCallback<ScreamingJazzApp>;
 
@@ -86,6 +87,7 @@ int ScreamingJazzApp::main(const std::vector<std::string>& args)
     ServerSocket svs(port); // set-up a server socket
     
     auto handler = new SelectorRequestHandlerFactory();
+    handler->addSelectorAndFactory(new URISelector(), new SimpleRequestHandlerFactory<TextOutputHandler, string>("Hello m8"));
     handler->addSelectorAndFactory(new AllSelector(), new SimpleRequestHandlerFactory<PenisHandler>());
     handler->addSelectorAndFactory(new LocalSelector(), new SimpleRequestHandlerFactory<TextOutputHandler, string>("Hello boys"));
     HTTPServer srv(handler, svs, pParams);

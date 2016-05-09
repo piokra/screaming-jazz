@@ -74,6 +74,9 @@
         <ccTool>
           <standard>11</standard>
         </ccTool>
+        <linkerTool>
+          <commandLine>-lPocoFoundation -lPocoUtil -lPocoNet</commandLine>
+        </linkerTool>
       </compileType>
       <item path="AllSelector.cpp" ex="false" tool="1" flavor2="0">
       </item>

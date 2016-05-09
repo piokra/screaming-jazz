@@ -35,16 +35,20 @@ HTTPRequestHandler* SelectorRequestHandlerFactory::createRequestHandler(const HT
     int best_priority = -1;
     for (int i = 0; i < size; i++)
     {
+
         auto test = mSelectorsFactories.at(i).first->choose(request);
-        if((test.priority > best_priority) || test.force)
+        if (test.wants)
         {
-            best_factory = mSelectorsFactories.at(i).second;
-            best_priority = test.priority;
-        }
-        
-        if(test.force)
-        {
-            break;
+            if ((test.priority > best_priority) || test.force)
+            {
+                best_factory = mSelectorsFactories.at(i).second;
+                best_priority = test.priority;
+            }
+
+            if (test.force)
+            {
+                break;
+            }
         }
     }
     return best_factory->createRequestHandler(request);
@@ -52,9 +56,9 @@ HTTPRequestHandler* SelectorRequestHandlerFactory::createRequestHandler(const HT
 
 void SelectorRequestHandlerFactory::addSelectorAndFactory(RequestSelector* req, HTTPRequestHandlerFactory* fac)
 {
-   
-    
-    mSelectorsFactories.push_back(RSFPair(RSPtr(req),FPtr(fac)));
+
+
+    mSelectorsFactories.push_back(RSFPair(RSPtr(req), FPtr(fac)));
 }
 
 

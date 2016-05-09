@@ -16,12 +16,15 @@
 
 #include "RequestSelector.h"
 #include "TextSelector.h"
+#include <Poco/Net/HTTPServerRequest.h>
 #include <vector>
 #include <memory>
 
 using namespace std;
-using namespace ScreamingJazz;
-
+using namespace Poco;
+using namespace Poco::Net;
+namespace ScreamingJazz
+{
 class URISelector : public RequestSelector
 {
     using TSPtr = unique_ptr<TextSelector>;
@@ -41,12 +44,12 @@ public:
     void addNextSelector(TextSelector* ptr, int usage);
     RequestSelector::Selection choose(const HTTPServerRequest& request) const override;
 protected:
-    vector<string> seperateRequest(const HTTPServerRequest& request);
+    vector<string> seperateRequest(const HTTPServerRequest& request) const;
 private:
     vector<SelectorCountPair> mSelectors;
     int mPriority;
     bool mForce;
 };
-
+}
 #endif /* URISELECTOR_H */
 

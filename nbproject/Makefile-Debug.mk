@@ -71,7 +71,7 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz ${OBJECTFILES} ${LDLIBSOPTIONS} -lPocoFoundation -lPocoUtil -lPocoNet
 
 ${OBJECTDIR}/AllSelector.o: AllSelector.cpp 
 	${MKDIR} -p ${OBJECTDIR}

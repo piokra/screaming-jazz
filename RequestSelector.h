@@ -11,8 +11,8 @@
  * Created on 01 May 2016, 13:04
  */
 
-#ifndef URISELECTOR_H
-#define URISELECTOR_H
+#ifndef REQUESTSELECTOR_H
+#define REQUESTSELECTOR_H
 
 #include <Poco/Net/HTTPServerRequest.h>
 
@@ -36,5 +36,5 @@ public:
 };
 
 }
-#endif /* URISELECTOR_H */
+#endif /* REQUESTSELECTOR_H */
 
