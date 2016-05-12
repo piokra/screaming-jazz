@@ -12,6 +12,8 @@
           <itemPath>ExactTextSelector.h</itemPath>
           <itemPath>TextSelector.h</itemPath>
         </logicalFolder>
+        <itemPath>IP4Selector.cpp</itemPath>
+        <itemPath>IP4Selector.h</itemPath>
         <itemPath>LocalSelector.h</itemPath>
         <itemPath>RequestSelector.h</itemPath>
         <itemPath>RequestSelectors.h</itemPath>
@@ -89,6 +91,10 @@
       <item path="ExactTextSelector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ExactTextSelector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IP4Selector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IP4Selector.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="LocalSelector.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -173,6 +179,10 @@
       <item path="ExactTextSelector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ExactTextSelector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IP4Selector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IP4Selector.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="LocalSelector.cpp" ex="false" tool="1" flavor2="0">
       </item>

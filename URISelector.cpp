@@ -51,7 +51,7 @@ RequestSelector::Selection URISelector::choose(const HTTPServerRequest& request)
     auto selector = mSelectors.begin();
     for(auto it=strings.begin(); it!=strings.end(); ++it)
     {
-        bool &= selector->selector->matches(*it);
+        result &= selector->selector->matches(*it);
         countsThisSelector++;
         if((countsThisSelector == selector->usage) && (selector != mSelectors.end()))
         {
