@@ -38,13 +38,16 @@ OBJECTFILES= \
 	${OBJECTDIR}/AllSelector.o \
 	${OBJECTDIR}/AllTextSelector.o \
 	${OBJECTDIR}/ExactTextSelector.o \
+	${OBJECTDIR}/FileOutputFactory.o \
+	${OBJECTDIR}/FileOutputHandler.o \
+	${OBJECTDIR}/FileUtil.o \
 	${OBJECTDIR}/IP4Selector.o \
 	${OBJECTDIR}/LocalSelector.o \
-	${OBJECTDIR}/PenisHandler.o \
 	${OBJECTDIR}/ScreamingJazzApp.o \
 	${OBJECTDIR}/SelectorProduct.o \
 	${OBJECTDIR}/SelectorRequestHandlerFactory.o \
 	${OBJECTDIR}/SelectorSum.o \
+	${OBJECTDIR}/StringUtil.o \
 	${OBJECTDIR}/TextOutputHandler.o \
 	${OBJECTDIR}/URISelector.o \
 	${OBJECTDIR}/main.o
@@ -68,11 +71,11 @@ LDLIBSOPTIONS=-lpthread
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming-jazz
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming-jazz: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming-jazz ${OBJECTFILES} ${LDLIBSOPTIONS} -lPocoFoundation -lPocoUtil -lPocoNet
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz ${OBJECTFILES} ${LDLIBSOPTIONS} -lPocoFoundation -lPocoUtil -lPocoNet
 
 ${OBJECTDIR}/AllSelector.o: AllSelector.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -89,6 +92,21 @@ ${OBJECTDIR}/ExactTextSelector.o: ExactTextSelector.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ExactTextSelector.o ExactTextSelector.cpp
 
+${OBJECTDIR}/FileOutputFactory.o: FileOutputFactory.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FileOutputFactory.o FileOutputFactory.cpp
+
+${OBJECTDIR}/FileOutputHandler.o: FileOutputHandler.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FileOutputHandler.o FileOutputHandler.cpp
+
+${OBJECTDIR}/FileUtil.o: FileUtil.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FileUtil.o FileUtil.cpp
+
 ${OBJECTDIR}/IP4Selector.o: IP4Selector.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -98,11 +116,6 @@ ${OBJECTDIR}/LocalSelector.o: LocalSelector.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LocalSelector.o LocalSelector.cpp
-
-${OBJECTDIR}/PenisHandler.o: PenisHandler.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PenisHandler.o PenisHandler.cpp
 
 ${OBJECTDIR}/ScreamingJazzApp.o: ScreamingJazzApp.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -123,6 +136,11 @@ ${OBJECTDIR}/SelectorSum.o: SelectorSum.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SelectorSum.o SelectorSum.cpp
+
+${OBJECTDIR}/StringUtil.o: StringUtil.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/StringUtil.o StringUtil.cpp
 
 ${OBJECTDIR}/TextOutputHandler.o: TextOutputHandler.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -145,7 +163,7 @@ ${OBJECTDIR}/main.o: main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming-jazz
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz
 
 # Subprojects
 .clean-subprojects:

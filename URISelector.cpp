@@ -12,12 +12,14 @@
  */
 
 #include "URISelector.h"
+#include "StringUtil.h"
 #include <Poco/Net/HTTPServerRequest.h>
 #include <iostream>
-
+#include <Poco/URI.h>
 namespace ScreamingJazz
 {
-
+using namespace std;
+using namespace Poco;
 using namespace Poco::Net;
 
 URISelector::URISelector() : URISelector(1, false)
@@ -51,9 +53,15 @@ RequestSelector::Selection URISelector::choose(const HTTPServerRequest& request)
     auto selector = mSelectors.begin();
     for(auto it=strings.begin(); it!=strings.end(); ++it)
     {
+        if(selector==mSelectors.end())
+        {
+            return {false,false, -1};
+        }
         result &= selector->selector->matches(*it);
         countsThisSelector++;
-        if((countsThisSelector == selector->usage) && (selector != mSelectors.end()))
+        auto next = selector;
+        ++next;
+        if((countsThisSelector == selector->usage))
         {
             countsThisSelector = 0;
             ++selector;
@@ -71,26 +79,10 @@ vector<string> URISelector::seperateRequest(const HTTPServerRequest& request) co
 {
     vector<string> ret;
     vector<string::size_type> pos;
-    string uri = request.getURI();
-    string::size_type ptr = uri.find_first_of("/?");
-    while (ptr != string::npos)
-    {
-        cout << ptr << endl;
-        pos.push_back(ptr);
-        ptr = uri.find_first_of("/?", ptr + 1);
-    }
-    pos.push_back(uri.size());
-    int start = 0, end = 0;
-    for (int i = 0; i < pos.size(); i++)
-    {
-        end = pos[i];
-        if (end - start > 1)
-        {
-            ret.push_back(uri.substr(start, end-start));
-
-        }
-        start = end + 1;
-    }
+    string uri_t = request.getURI();
+    string uri = "";
+    URI::decode(uri_t,uri);
+    StringUtil::split(uri,"/?",ret);
     return ret;
 }
 }

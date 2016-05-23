@@ -5,33 +5,33 @@
  */
 
 /* 
- * File:   PenisHandler.h
+ * File:   FileOutputHandler.h
  * Author: Pan Piotr
  *
- * Created on 01 May 2016, 20:14
+ * Created on 23 May 2016, 10:11
  */
 
-#ifndef PENISHANDLER_H
-#define PENISHANDLER_H
+#ifndef FILEOUTPUTHANDLER_H
+#define FILEOUTPUTHANDLER_H
 
 #include <Poco/Net/HTTPRequestHandler.h>
+#include <Poco/File.h>
+#include <Poco/Path.h>
 
-namespace ScreamingJazz
-{
 using namespace Poco;
 using namespace Poco::Net;
-class PenisHandler : public HTTPRequestHandler
+
+class FileOutputHandler : public HTTPRequestHandler 
 {
 public:
-    PenisHandler();
-    PenisHandler(const PenisHandler& orig);
-    virtual ~PenisHandler();
-    
+    FileOutputHandler(Path path);
+    FileOutputHandler(const FileOutputHandler& orig);
+    virtual ~FileOutputHandler();
     void handleRequest(HTTPServerRequest& request, HTTPServerResponse& response) override;
 
 private:
-
+    Path mPath;
 };
-}
-#endif /* PENISHANDLER_H */
+
+#endif /* FILEOUTPUTHANDLER_H */
 

@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=screaming-jazz
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/screaming-jazz
+CND_ARTIFACT_NAME_Debug=screaming_jazz
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/screaming_jazz
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
-CND_PACKAGE_NAME_Debug=screaming-jazz.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/screaming-jazz.tar
+CND_PACKAGE_NAME_Debug=screamingjazz.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/screamingjazz.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=screaming-jazz
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/screaming-jazz
+CND_ARTIFACT_NAME_Release=screaming_jazz
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/screaming_jazz
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
-CND_PACKAGE_NAME_Release=screaming-jazz.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/screaming-jazz.tar
+CND_PACKAGE_NAME_Release=screamingjazz.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/screamingjazz.tar
 #
 # include compiler specific variables
 #

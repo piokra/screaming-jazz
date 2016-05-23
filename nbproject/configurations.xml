@@ -22,7 +22,9 @@
         <itemPath>URISelector.h</itemPath>
       </logicalFolder>
       <itemPath>AllSelector.h</itemPath>
-      <itemPath>PenisHandler.h</itemPath>
+      <itemPath>FileOutputFactory.h</itemPath>
+      <itemPath>FileOutputHandler.h</itemPath>
+      <itemPath>FileUtil.h</itemPath>
       <itemPath>ScreamingJazzApp.h</itemPath>
       <itemPath>SelectorRequestHandlerFactory.h</itemPath>
       <itemPath>SimpleFactories.h</itemPath>
@@ -43,9 +45,13 @@
         <itemPath>SelectorSum.cpp</itemPath>
         <itemPath>URISelector.cpp</itemPath>
       </logicalFolder>
-      <itemPath>PenisHandler.cpp</itemPath>
+      <itemPath>FileOutputFactory.cpp</itemPath>
+      <itemPath>FileOutputHandler.cpp</itemPath>
+      <itemPath>FileUtil.cpp</itemPath>
       <itemPath>ScreamingJazzApp.cpp</itemPath>
       <itemPath>SelectorRequestHandlerFactory.cpp</itemPath>
+      <itemPath>StringUtil.cpp</itemPath>
+      <itemPath>StringUtil.h</itemPath>
       <itemPath>TextOutputHandler.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -68,7 +74,7 @@
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <compilerSet>default</compilerSet>
+        <compilerSet>GNU|GNU</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
@@ -92,6 +98,18 @@
       </item>
       <item path="ExactTextSelector.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="FileOutputFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileOutputFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileOutputHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileOutputHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileUtil.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileUtil.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="IP4Selector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="IP4Selector.h" ex="false" tool="3" flavor2="0">
@@ -99,10 +117,6 @@
       <item path="LocalSelector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LocalSelector.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="PenisHandler.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="PenisHandler.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="RequestSelector.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -125,6 +139,10 @@
       <item path="SelectorSum.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="SimpleFactories.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StringUtil.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StringUtil.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TemplateUtil.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -180,6 +198,18 @@
       </item>
       <item path="ExactTextSelector.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="FileOutputFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileOutputFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileOutputHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileOutputHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileUtil.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileUtil.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="IP4Selector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="IP4Selector.h" ex="false" tool="3" flavor2="0">
@@ -187,10 +217,6 @@
       <item path="LocalSelector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LocalSelector.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="PenisHandler.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="PenisHandler.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="RequestSelector.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -213,6 +239,10 @@
       <item path="SelectorSum.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="SimpleFactories.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StringUtil.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StringUtil.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TemplateUtil.h" ex="false" tool="3" flavor2="0">
       </item>

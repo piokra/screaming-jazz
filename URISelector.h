@@ -20,11 +20,12 @@
 #include <vector>
 #include <memory>
 
+
+namespace ScreamingJazz
+{
 using namespace std;
 using namespace Poco;
 using namespace Poco::Net;
-namespace ScreamingJazz
-{
 class URISelector : public RequestSelector
 {
     using TSPtr = unique_ptr<TextSelector>;
