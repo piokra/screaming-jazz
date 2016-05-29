@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/FileUtil.o \
 	${OBJECTDIR}/IP4Selector.o \
 	${OBJECTDIR}/LocalSelector.o \
+	${OBJECTDIR}/SQLLogger.o \
 	${OBJECTDIR}/ScreamingJazzApp.o \
 	${OBJECTDIR}/SelectorProduct.o \
 	${OBJECTDIR}/SelectorRequestHandlerFactory.o \
@@ -67,7 +68,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-L/usr/local/lib
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -75,7 +76,7 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz ${OBJECTFILES} ${LDLIBSOPTIONS} -lPocoFoundation -lPocoUtil -lPocoNet
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz ${OBJECTFILES} ${LDLIBSOPTIONS} -lPocoFoundation -lPocoUtil -lPocoNet -lPocoData -lPocoDataMySQL
 
 ${OBJECTDIR}/AllSelector.o: AllSelector.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -116,6 +117,11 @@ ${OBJECTDIR}/LocalSelector.o: LocalSelector.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LocalSelector.o LocalSelector.cpp
+
+${OBJECTDIR}/SQLLogger.o: SQLLogger.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SQLLogger.o SQLLogger.cpp
 
 ${OBJECTDIR}/ScreamingJazzApp.o: ScreamingJazzApp.cpp 
 	${MKDIR} -p ${OBJECTDIR}

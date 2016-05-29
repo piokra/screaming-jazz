@@ -33,6 +33,8 @@
 #include "ExactTextSelector.h"
 #include "FileOutputHandler.h"
 #include "FileOutputFactory.h"
+#include "AllTextSelector.h"
+#include "SQLLogger.h"
 using SJ = ScreamingJazzApp;
 using SJCallback = OptionCallback<ScreamingJazzApp>;
 
@@ -44,6 +46,8 @@ const char* ScreamingJazzApp::name() const
 {
     return "Screaming Jazz";
 }
+
+SQLLogger* ScreamingJazzApp::sDefaultLogger = 0;
 
 void ScreamingJazzApp::defineOptions(OptionSet& options)
 {
@@ -88,22 +92,32 @@ int ScreamingJazzApp::main(const std::vector<std::string>& args)
     pParams->setMaxQueued(100);
     pParams->setMaxThreads(16);
     ServerSocket svs(port); // set-up a server socket
-    
+    SQLLogger* sDefaultLogger = new SQLLogger("yolo", "localhost", "3306", "SQLLogger", "root", "");
+    sDefaultLogger->start();
+    sDefaultLogger->createTag("[DEFAULT]", 72);
     auto handler = new SelectorRequestHandlerFactory();
     auto uriselector = new URISelector();
-    uriselector->addNextSelector(new ExactTextSelector("yolo swag"),-1);
-    handler->addSelectorAndFactory(uriselector, 
+    uriselector->addNextSelector(new ExactTextSelector("static"),1);
+    uriselector->addNextSelector(new AllTextSelector(), -1);
+    handler->addSelectorAndFactory(new AllSelector(), 
                                    new SimpleRequestHandlerFactory<TextOutputHandler, string>("Hello m8"));
     handler->addSelectorAndFactory(new LocalSelector(), 
                                    new SimpleRequestHandlerFactory<TextOutputHandler, string>("Hello boys"));
-    handler->addSelectorAndFactory(new AllSelector(100), 
-                                   new FileOutputFactory(0, "/home/touchstone/"));
+    handler->addSelectorAndFactory(uriselector, 
+                                   new FileOutputFactory(1, "/home/touchstone/pages/"));
     
     HTTPServer srv(handler, svs, pParams);
     // start the HTTPServer
     srv.start();
     waitForTerminationRequest();
     // Stop the HTTPServer
+    sDefaultLogger->stop();
+    delete sDefaultLogger;
     srv.stop();
     cout << "Good bye" << endl;
+}
+
+SQLLogger* ScreamingJazzApp::defaultSQLLogger()
+{
+    return sDefaultLogger;
 }

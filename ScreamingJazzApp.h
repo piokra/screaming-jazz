@@ -16,11 +16,15 @@
 
 #include <Poco/Util/ServerApplication.h>
 
+#include "SQLLogger.h"
+
 using namespace Poco;
 using namespace Poco::Util;
 class ScreamingJazzApp : public ServerApplication
 {
 public:
+    
+    static SQLLogger* defaultSQLLogger();
     
     virtual const char* name() const;
 
@@ -39,6 +43,7 @@ public:
 protected:
     virtual void handleHelp(const std::string& name, const std::string& value);
 private:
+    static SQLLogger* sDefaultLogger;
 };
 
 #endif /* SCREAMINGJAZZAPP_H */

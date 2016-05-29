@@ -19,6 +19,9 @@
 #include <Poco/Net/HTTPServerRequest.h>
 #include <Poco/Path.h>
 
+namespace ScreamingJazz
+{
+
 using namespace Poco::Net;
 using namespace Poco;
 
@@ -37,4 +40,4 @@ private:
 };
 
 #endif /* FILEOUTPUTFACTORY_H */
-
+}

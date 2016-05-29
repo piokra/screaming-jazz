@@ -18,10 +18,12 @@
 #include <Poco/File.h>
 #include <Poco/Path.h>
 
+namespace ScreamingJazz
+{
 using namespace Poco;
 using namespace Poco::Net;
 
-class FileOutputHandler : public HTTPRequestHandler 
+class FileOutputHandler : public HTTPRequestHandler
 {
 public:
     FileOutputHandler(Path path);
@@ -32,6 +34,6 @@ public:
 private:
     Path mPath;
 };
-
+}
 #endif /* FILEOUTPUTHANDLER_H */
 

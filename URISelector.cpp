@@ -71,6 +71,11 @@ RequestSelector::Selection URISelector::choose(const HTTPServerRequest& request)
             return {false,false, -1};
         }
     }
+    if(mSelectors.size()!=0 && strings.size()==0)
+    {
+        return {false,false,-1};
+    }
+    
     return {true,mForce,mPriority};
 
 }

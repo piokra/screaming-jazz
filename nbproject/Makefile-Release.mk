@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/FileUtil.o \
 	${OBJECTDIR}/IP4Selector.o \
 	${OBJECTDIR}/LocalSelector.o \
+	${OBJECTDIR}/SQLLogger.o \
 	${OBJECTDIR}/ScreamingJazzApp.o \
 	${OBJECTDIR}/SelectorProduct.o \
 	${OBJECTDIR}/SelectorRequestHandlerFactory.o \
@@ -116,6 +117,11 @@ ${OBJECTDIR}/LocalSelector.o: LocalSelector.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LocalSelector.o LocalSelector.cpp
+
+${OBJECTDIR}/SQLLogger.o: SQLLogger.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SQLLogger.o SQLLogger.cpp
 
 ${OBJECTDIR}/ScreamingJazzApp.o: ScreamingJazzApp.cpp 
 	${MKDIR} -p ${OBJECTDIR}

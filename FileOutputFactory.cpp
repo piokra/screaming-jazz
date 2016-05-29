@@ -15,6 +15,9 @@
 #include "StringUtil.h"
 #include "FileOutputHandler.h"
 
+namespace ScreamingJazz
+{
+
 FileOutputFactory::FileOutputFactory(unsigned startAt, Path homeDir) : mStartAt(startAt), mHomePath(homeDir)
 {
 }
@@ -32,10 +35,10 @@ HTTPRequestHandler* FileOutputFactory::createRequestHandler(const HTTPServerRequ
 {
     Path requestPath = mHomePath;
     auto vec = StringUtil::split(request.getURI(), "?/");
-    for(unsigned i = mStartAt; i<vec.size(); i++)
+    for (unsigned i = mStartAt; i < vec.size(); i++)
     {
         auto part = vec[i];
-        if(part=="..")
+        if (part == "..")
         {
         }
         else
@@ -44,8 +47,8 @@ HTTPRequestHandler* FileOutputFactory::createRequestHandler(const HTTPServerRequ
         }
     }
     return new FileOutputHandler(requestPath);
-    
+
 }
 
-    
+}
 
