@@ -129,7 +129,7 @@ void SQLLogger::log(const string& msg)
 
 void SQLLogger::log(const string& msg, const string& msg_level)
 {
-    auto _msg = new Message(msg,msg_level);
+    Message* _msg = new Message(msg,msg_level);
     mMsgQueue.enqueueNotification(_msg);
 }
 

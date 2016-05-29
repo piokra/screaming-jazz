@@ -7,23 +7,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/TextOutputHandler.h</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/SelectorRequestHandlerFactory.cpp</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/ScreamingJazzApp.cpp</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/FileOutputFactory.h</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/AllSelector.h</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/AllSelector.cpp</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/FileUtil.h</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/FileUtil.cpp</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/StringUtil.h</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/ScreamingJazzApp.h</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/URISelector.h</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/SelectorRequestHandlerFactory.h</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/FileOutputFactory.cpp</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/URISelector.cpp</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/StringUtil.cpp</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/FileOutputHandler.cpp</file>
-            <file>file:/C:/Users/Pan%20Piotr/Desktop/Projects/Web/Screaming%20Jazz/FileOutputHandler.h</file>
+            <file>file:/C:/Users/Joanna%20Cichowska/Documents/NetBeansProjects/screaming-jazz/IP4Selector.h</file>
+            <file>file:/C:/Users/Joanna%20Cichowska/Documents/NetBeansProjects/screaming-jazz/ScreamingJazzApp.cpp</file>
+            <file>file:/C:/Users/Joanna%20Cichowska/Documents/NetBeansProjects/screaming-jazz/IP4Selector.cpp</file>
+            <file>file:/C:/Users/Joanna%20Cichowska/Documents/NetBeansProjects/screaming-jazz/RequestSelector.h</file>
+            <file>file:/C:/Users/Joanna%20Cichowska/Documents/NetBeansProjects/screaming-jazz/ScreamingJazzApp.h</file>
+            <file>file:/C:/Users/Joanna%20Cichowska/Documents/NetBeansProjects/screaming-jazz/PenisHandler.h</file>
+            <file>file:/C:/Users/Joanna%20Cichowska/Documents/NetBeansProjects/screaming-jazz/URISelector.cpp</file>
         </group>
     </open-files>
 </project-private>

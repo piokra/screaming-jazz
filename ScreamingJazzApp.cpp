@@ -35,6 +35,7 @@
 #include "FileOutputFactory.h"
 #include "AllTextSelector.h"
 #include "SQLLogger.h"
+#include "RequestLogger.h"
 using SJ = ScreamingJazzApp;
 using SJCallback = OptionCallback<ScreamingJazzApp>;
 
@@ -86,15 +87,18 @@ void ScreamingJazzApp::uninitialize()
 
 int ScreamingJazzApp::main(const std::vector<std::string>& args)
 {
+    ScreamingJazzApp::sDefaultLogger = new SQLLogger("yolo", "localhost", "3306", "SQLLogger", "root", "");
+    cout << sDefaultLogger << endl;
     cout << "Hello boys" << endl;
+    
     Poco::UInt16 port = 9999;
     HTTPServerParams* pParams = new HTTPServerParams;
     pParams->setMaxQueued(100);
     pParams->setMaxThreads(16);
     ServerSocket svs(port); // set-up a server socket
-    SQLLogger* sDefaultLogger = new SQLLogger("yolo", "localhost", "3306", "SQLLogger", "root", "");
-    sDefaultLogger->start();
-    sDefaultLogger->createTag("[DEFAULT]", 72);
+    ScreamingJazzApp::sDefaultLogger->start();
+    //sDefaultLogger->createTag("[DEFAULT]", 72);
+    //sDefaultLogger->createTag("[REQUESTS]",101);
     auto handler = new SelectorRequestHandlerFactory();
     auto uriselector = new URISelector();
     uriselector->addNextSelector(new ExactTextSelector("static"),1);
@@ -105,13 +109,13 @@ int ScreamingJazzApp::main(const std::vector<std::string>& args)
                                    new SimpleRequestHandlerFactory<TextOutputHandler, string>("Hello boys"));
     handler->addSelectorAndFactory(uriselector, 
                                    new FileOutputFactory(1, "/home/touchstone/pages/"));
-    
-    HTTPServer srv(handler, svs, pParams);
+    auto logged_handler = new RequestLogger(handler, "[REQUESTS]", false);
+    HTTPServer srv(logged_handler, svs, pParams);
     // start the HTTPServer
     srv.start();
     waitForTerminationRequest();
     // Stop the HTTPServer
-    sDefaultLogger->stop();
+    ScreamingJazzApp::sDefaultLogger->stop();
     delete sDefaultLogger;
     srv.stop();
     cout << "Good bye" << endl;
@@ -119,5 +123,6 @@ int ScreamingJazzApp::main(const std::vector<std::string>& args)
 
 SQLLogger* ScreamingJazzApp::defaultSQLLogger()
 {
-    return sDefaultLogger;
+    cout << ": " <<ScreamingJazzApp::sDefaultLogger << endl;
+    return ScreamingJazzApp::sDefaultLogger;
 }

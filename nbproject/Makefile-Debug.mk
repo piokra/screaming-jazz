@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/FileUtil.o \
 	${OBJECTDIR}/IP4Selector.o \
 	${OBJECTDIR}/LocalSelector.o \
+	${OBJECTDIR}/RequestLogger.o \
 	${OBJECTDIR}/SQLLogger.o \
 	${OBJECTDIR}/ScreamingJazzApp.o \
 	${OBJECTDIR}/SelectorProduct.o \
@@ -72,11 +73,11 @@ LDLIBSOPTIONS=-L/usr/local/lib
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming-jazz
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming-jazz: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz ${OBJECTFILES} ${LDLIBSOPTIONS} -lPocoFoundation -lPocoUtil -lPocoNet -lPocoData -lPocoDataMySQL
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming-jazz ${OBJECTFILES} ${LDLIBSOPTIONS} -lPocoFoundation -lPocoUtil -lPocoNet -lPocoData -lPocoDataMySQL
 
 ${OBJECTDIR}/AllSelector.o: AllSelector.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -117,6 +118,11 @@ ${OBJECTDIR}/LocalSelector.o: LocalSelector.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LocalSelector.o LocalSelector.cpp
+
+${OBJECTDIR}/RequestLogger.o: RequestLogger.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/RequestLogger.o RequestLogger.cpp
 
 ${OBJECTDIR}/SQLLogger.o: SQLLogger.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -169,7 +175,7 @@ ${OBJECTDIR}/main.o: main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming_jazz
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/screaming-jazz
 
 # Subprojects
 .clean-subprojects:

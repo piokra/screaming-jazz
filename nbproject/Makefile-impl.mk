@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Screaming Jazz
+PROJECTNAME=screaming-jazz
 
 # Active Configuration
 DEFAULTCONF=Debug
