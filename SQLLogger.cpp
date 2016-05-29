@@ -133,7 +133,7 @@ void SQLLogger::log(const string& msg, const string& msg_level)
     mMsgQueue.enqueueNotification(_msg);
 }
 
-void SQLLogger::createTag(const string& str, int severity)
+void SQLLogger::createTag(const string& _str, int severity)
 {
     string str = _str;
     auto&& session = *mSession;
